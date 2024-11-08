@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI时代与非AI时代提高HTML开发效率的实用技巧</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+        table:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+        tbody tr:hover {
+            background-color: #e0e0e0;
+        }
+        .ai-method {
+            background-color: #d1e7dd;
+        }
+        .non-ai-method {
+            background-color: #f8d7da;
+        }
+        .sort-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .sort-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .sort-button:hover {
+            background-color: #0056b3;
+        }
+        @media screen and (max-width: 600px) {
+            th, td {
+                display: block;
+                width: 100%;
+            }
+            th {
+                text-align: center;
+            }
+            td {
+                text-align: center;
+                border-bottom: none;
+            }
+            td:last-child {
+                border-bottom: 1px solid #ccc;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>AI时代与非AI时代提高HTML开发效率的实用技巧</h1>
+    
+    <div class="sort-buttons">
+        <button class="sort-button" onclick="sortTable(5, false)">按效率提升降序</button>
+        <button class="sort-button" onclick="sortTable(5, true)">按效率提升升序</button>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>技巧名称</th>
+                <th>描述</th>
+                <th>具体例子</th>
+                <th>参考链接</th>
+                <th>预计效率提升</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- AI时代技巧 -->
+            <tr class="ai-method">
+                <td>使用AI辅助工具</td>
+                <td>利用AI工具生成HTML代码片段和模板,减少手动编码时间。</td>
+                <td>使用GitHub Copilot等工具自动补全HTML代码。</td>
+                <td><a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a></td>
+                <td>约 40%</td>
+            </tr>
+            <tr class="ai-method">
+                <td>使用AI设计工具</td>
+                <td>利用AI生成网页设计原型和样式,快速实现视觉效果。</td>
+                <td>使用Figma的AI插件生成HTML设计元素。</td>
+                <td><a href="https://www.figma.com/" target="_blank">Figma</a></td>
+                <td>约 30%</td>
+            </tr>
+            <tr class="ai-method">
+                <td>使用AI生成内容</td>
+                <td>利用AI生成HTML网页内容,减少人工撰写时间。</td>
+                <td>使用ChatGPT等工具生成HTML文本内容。</td>
+                <td><a href="https://openai.com/chatgpt" target="_blank">ChatGPT</a></td>
+                <td>约 30%</td>
+            </tr>
+            <tr class="ai-method">
+                <td>使用AI进行代码重构</td>
+                <td>利用AI工具自动重构HTML代码,提高代码质量。</td>
+                <td>使用Refactoring.Guru等工具进行HTML代码重构。</td>
+                <td><a href="https://refactoring.guru/" target="_blank">Refactoring.Guru</a></td>
+                <td>约 25%</td>
+            </tr>
+
+            <!-- 非AI时代技巧 -->
+            <tr class="non-ai-method">
+                <td>使用HTML5语义化标签</td>
+                <td>使用有意义的标签来描述内容,提高可读性和可维护性。</td>
+                <td>用&lt;header&gt;、&lt;nav&gt;、&lt;article&gt;等替代通用的&lt;div&gt;。</td>
+                <td><a href="https://www.w3school.com.cn/html/html5_semantic_elements.asp" target="_blank">HTML5
+                        语义元素</a></td>
+                <td>约 20%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS框架</td>
+                <td>利用现成的CSS框架快速搭建响应式网页。</td>
+                <td>使用Bootstrap、Tailwind CSS等框架提供的组件和布局。</td>
+                <td><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>、<a href="https://tailwindcss.com/"
+                        target="_blank">Tailwind CSS</a></td>
+                <td>约 30%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用HTML和CSS预处理器</td>
+                <td>利用Pug、Sass等预处理器简化HTML和CSS的编写。</td>
+                <td>用Pug模板引擎生成HTML,用Sass编写更高效的CSS。</td>
+                <td><a href="https://pugjs.org/" target="_blank">Pug</a>、<a href="https://sass-lang.com/"
+                        target="_blank">Sass</a></td>
+                <td>约 25%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS Flexbox布局</td>
+                <td>利用Flexbox更高效地实现页面布局。</td>
+                <td>对容器使用display: flex,轻松实现子元素的排列和对齐。</td>
+                <td><a href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank">Flex 布局教程</a>
+                </td>
+                <td>约 20%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS Sprite雪碧图</td>
+                <td>将多个小图标合并到一张图片,减少HTTP请求数。</td>
+                <td>用background-position准确定位需要显示的图标。</td>
+                <td><a href="https://www.zhangxinxu.com/wordpress/2010/03/css-sprite%E7%B2%BE%E7%81%B5%E4%B9%8B%E5%9B%BE%E7%89%87%E5%90%88%E5%B9%B6/"
+                        target="_blank">CSS Sprite精灵图应用</a></td>
+                <td>约 20%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>压缩HTML、CSS和JavaScript</td>
+                <td>压缩代码,去除注释和空白,减小文件体积。</td>
+                <td>使用在线工具或构建工具如Gulp、Webpack等自动压缩。</td>
+                <td><a href="https://github.com/kangax/html-minifier" target="_blank">HTML Minifier</a></td>
+                <td>约 15%</td>
+            </tr>
+            <tr class="ai-method">
+                <td>使用AI图像识别</td>
+                <td>利用AI自动识别和标记图像,生成相应的HTML标签。</td>
+                <td>使用Google Cloud Vision API识别图像内容并生成alt属性。</td>
+                <td><a href="https://cloud.google.com/vision" target="_blank">Google Cloud Vision API</a></td>
+                <td>约 20%</td>
+            </tr>
+            <tr class="ai-method">
+                <td>使用AI语音转文字</td>
+                <td>利用AI将语音内容转换为HTML文本。</td>
+                <td>使用Azure Speech Services将语音转换为文字并插入到HTML中。</td>
+                <td><a href="https://azure.microsoft.com/services/cognitive-services/speech-services/"
+                        target="_blank">Azure Speech Services</a></td>
+                <td>约 25%</td>
+            </tr>
+            <tr class="ai-method">
+                <td>使用AI自动化测试</td>
+                <td>利用AI自动化测试工具检测HTML代码的质量和性能。</td>
+                <td>使用Testim.io进行AI驱动的自动化测试。</td>
+                <td><a href="https://www.testim.io/" target="_blank">Testim.io</a></td>
+                <td>约 30%</td>
+            </tr>
+            <tr class="ai-method">
+                <td>使用AI代码优化</td>
+                <td>利用AI分析和优化HTML代码,提高性能。</td>
+                <td>使用Sourcery优化HTML代码,如删除无用代码、优化图像等。</td>
+                <td><a href="https://sourcery.ai/" target="_blank">Sourcery</a></td>
+                <td>约 15%</td>
+            </tr>
+
+            <!-- 补充的非AI时代技巧 -->
+            <tr class="non-ai-method">
+                <td>使用Emmet</td>
+                <td>使用Emmet编写HTML代码的缩写,提高编写速度。</td>
+                <td>输入nav>ul>li*5>a后按Tab键,快速生成导航菜单的HTML结构。</td>
+                <td><a href="https://docs.emmet.io/cheat-sheet/" target="_blank">Emmet备忘清单</a></td>
+                <td>约 50%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用HTML模板</td>
+                <td>使用预先设计好的HTML模板,快速搭建网页。</td>
+                <td>使用HTML5 UP提供的免费响应式HTML5模板。</td>
+                <td><a href="https://html5up.net/" target="_blank">HTML5 UP</a></td>
+                <td>约 60%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS方法论</td>
+                <td>使用CSS方法论如BEM、OOCSS等,提高CSS的可维护性和复用性。</td>
+                <td>使用BEM命名约定来组织CSS类名,如.header__logo、.header__nav等。</td>
+                <td><a href="https://en.bem.info/" target="_blank">BEM</a></td>
+                <td>约 20%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS Grid布局</td>
+                <td>使用CSS Grid布局更高效地实现复杂的页面布局。</td>
+                <td>使用grid-template-areas定义网页的整体布局结构。</td>
+                <td><a href="https://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html"
+                        target="_blank">Grid布局教程</a></td>
+                <td>约 25%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS自定义属性</td>
+                <td>使用CSS自定义属性(CSS变量)集中管理和复用样式值。</td>
+                <td>定义:root{--main-color:#ff0000},在需要的地方引用var(--main-color)。</td>
+                <td><a href="https://www.ruanyifeng.com/blog/2017/05/css-variables.html" target="_blank">CSS变量教程</a>
+                </td>
+                <td>约 15%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用现代图像格式</td>
+                <td>使用现代图像格式如WebP、AVIF等,减小图像文件大小。</td>
+                <td>使用picture标签提供WebP和AVIF格式的图像,兼容不同浏览器。</td>
+                <td><a href="https://web.dev/i18n/en/serve-images-webp/" target="_blank">使用WebP图像</a></td>
+                <td>约 30%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS Houdini</td>
+                <td>使用CSS Houdini编写高性能的CSS。</td>
+                <td>使用CSS Paint API自定义CSS图像。</td>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Houdini" target="_blank">CSS Houdini</a>
+                </td>
+                <td>约 20%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS Shapes</td>
+                <td>使用CSS Shapes创建不规则的布局和排版效果。</td>
+                <td>使用clip-path属性创建多边形或圆形的内容区域。</td>
+                <td><a href="https://css-tricks.com/working-with-shapes-in-web-design/" target="_blank">在Web设计中使用形状</a>
+                </td>
+                <td>约 15%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS Scroll Snap</td>
+                <td>使用CSS Scroll Snap创建整屏滚动效果。</td>
+                <td>在容器上设置scroll-snap-type:y mandatory,在子元素上设置scroll-snap-align:start。</td>
+                <td><a href="https://css-tricks.com/practical-css-scroll-snapping/" target="_blank">实用的CSS Scroll
+                        Snapping</a></td>
+                <td>约 20%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS Containment</td>
+                <td>使用CSS Containment优化渲染性能。</td>
+                <td>在独立的组件上设置contain:paint,减少浏览器的重绘和重排。</td>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/contain" target="_blank">CSS
+                        Containment</a></td>
+                <td>约 10%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS @supports</td>
+                <td>使用CSS @supports检测浏览器对CSS属性和值的支持情况。</td>
+                <td>@supports(display:grid){...}检测浏览器是否支持CSS Grid布局。</td>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@supports" target="_blank">CSS
+                        @supports</a></td>
+                <td>约 10%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS @media</td>
+                <td>使用CSS @media根据媒体查询条件应用不同的样式。</td>
+                <td>@media(max-width:600px){...}设置移动端的样式。</td>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media" target="_blank">CSS @media</a>
+                </td>
+                <td>约 20%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS @font-face</td>
+                <td>使用CSS @font-face引入自定义字体。</td>
+                <td>@font-face{font-family:'MyFont';src:url('myfont.woff2') format('woff2');}定义自定义字体。</td>
+                <td><a href="https://css-tricks.com/snippets/css/using-font-face-in-css/"
+                        target="_blank">在CSS中使用@font-face</a></td>
+                <td>约 10%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS @keyframes</td>
+                <td>使用CSS @keyframes定义CSS动画的关键帧。</td>
+                <td>@keyframes slide{0%{transform:translateX(0);}100%{transform:translateX(100px);}}定义一个名为slide的动画。</td>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes" target="_blank">CSS
+                        @keyframes</a></td>
+                <td>约 15%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS @import</td>
+                <td>使用CSS @import引入外部CSS样式表。</td>
+                <td>@import url('style.css');引入名为style.css的外部样式表。</td>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import" target="_blank">CSS @import</a>
+                </td>
+                <td>约 10%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS @page</td>
+                <td>使用CSS @page设置打印页面的样式。</td>
+                <td>@page{size:A4 portrait;margin:1cm;}设置A4纸竖向打印,页边距为1厘米。</td>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@page" target="_blank">CSS @page</a></td>
+                <td>约 10%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS @counter-style</td>
+                <td>使用CSS @counter-style定义自定义的计数器样式。</td>
+                <td>@counter-style circled-digits{system:fixed;symbols:⓪①②③④⑤⑥⑦⑧⑨;suffix:'
+                    ';}定义一个名为circled-digits的自定义计数器样式。</td>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style" target="_blank">CSS
+                        @counter-style</a></td>
+                <td>约 10%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS @property</td>
+                <td>使用CSS @property注册自定义的CSS属性。</td>
+                <td>@property --my-color{syntax:'<color>
+                        ';inherits:false;initial-value:#c0ffee;}注册一个名为--my-color的自定义CSS属性。</td>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@property" target="_blank">CSS
+                        @property</a></td>
+                <td>约 10%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS @layer</td>
+                <td>使用CSS @layer定义样式表中的层,控制样式的优先级。</td>
+                <td>@layer base,layout,component;定义三个层base、layout和component,优先级从低到高。</td>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@layer" target="_blank">CSS @layer</a>
+                </td>
+                <td>约 10%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS预加载</td>
+                <td>使用CSS的preload关键字预加载关键资源,提高页面加载速度。</td>
+                <td>&lt;link rel="preload" href="style.css" as="style"&gt;预加载CSS文件。</td>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/preload" target="_blank">Preload</a></td>
+                <td>约 10%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS预连接</td>
+                <td>使用CSS的preconnect关键字预先建立与关键域名的连接,加快后续资源加载。</td>
+                <td>&lt;link rel="preconnect" href="https://example.com"&gt;预连接到example.com。</td>
+                <td><a href="https://web.dev/uses-rel-preconnect/" target="_blank">Preconnect</a></td>
+                <td>约 10%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS预渲染</td>
+                <td>使用CSS的prerender关键字预先渲染可能需要的页面,加快页面切换速度。</td>
+                <td>&lt;link rel="prerender" href="https://example.com/next-page.html"&gt;预渲染可能的下一页。</td>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/prerender" target="_blank">Prerender</a></td>
+                <td>约 15%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS预获取</td>
+                <td>使用CSS的prefetch关键字预先获取可能需要的资源,提高后续加载速度。</td>
+                <td>&lt;link rel="prefetch" href="image.jpg"&gt;预获取可能需要的图片。</td>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ" target="_blank">Prefetch</a></td>
+                <td>约 10%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS预加载字体</td>
+                <td>使用CSS的font-display属性控制自定义字体的加载和显示行为,提高文本渲染速度。</td>
+                <td>@font-face{font-family:'MyFont';src:url('myfont.woff2') format('woff2');font-display:swap;}使用swap策略加载自定义字体。</td>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display" target="_blank">Font Display</a></td>
+                <td>约 20%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS关键路径优化</td>
+                <td>优化关键渲染路径,尽早加载和应用关键CSS,提高首屏渲染速度。</td>
+                <td>内联关键CSS,延迟加载非关键CSS,避免CSS阻塞渲染。</td>
+                <td><a href="https://web.dev/critical-rendering-path/" target="_blank">关键渲染路径</a></td>
+                <td>约 25%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS代码分割</td>
+                <td>将CSS代码分割成更小、更具体的文件,按需加载,减小初始加载量。</td>
+                <td>将样式表按组件、页面或媒体查询规则分割成多个文件。</td>
+                <td><a href="https://web.dev/reduce-network-payloads-using-text-compression/" target="_blank">网络负载优化</a></td>
+                <td>约 15%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS树摇优化</td>
+                <td>使用构建工具自动移除未使用的CSS代码,减小CSS文件大小。</td>
+                <td>使用PurgeCSS、UnCSS等CSS树摇工具优化CSS。</td>
+                <td><a href="https://purgecss.com/" target="_blank">PurgeCSS</a></td>
+                <td>约 20%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS原子化</td>
+                <td>使用原子化的CSS类名,提高CSS的复用性和可维护性。</td>
+                <td>使用Tailwind CSS、Tachyons等原子化CSS框架。</td>
+                <td><a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a></td>
+                <td>约 25%</td>
+            </tr>
+            <tr class="non-ai-method">
+                <td>使用CSS-in-JS</td>
+                <td>使用CSS-in-JS库编写模块化、作用域化的CSS代码。</td>
+                <td>使用styled-components、Emotion等CSS-in-JS库。</td>
+                <td><a href="https://styled-components.com/" target="_blank">styled-components</a></td>
+                <td>约 20%</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <script>
+        function sortTable(columnIndex, ascending) {
+            const table = document.querySelector('table');
+            const tbody = table.querySelector('tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+
+            rows.sort((a, b) => {
+                const cellA = a.querySelectorAll('td')[columnIndex].textContent;
+                const cellB = b.querySelectorAll('td')[columnIndex].textContent;
+
+                const percentA = parseFloat(cellA.replace('%', ''));
+                const percentB = parseFloat(cellB.replace('%', ''));
+
+                return ascending ? percentA - percentB : percentB - percentA;
+            });
+
+            tbody.innerHTML = '';
+            rows.forEach(row => tbody.appendChild(row));
+        }
+    </script>
+</body>
+
+</html>
